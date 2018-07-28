@@ -1,44 +1,113 @@
 package com.example.android.UnifiedLogger;
 
+import android.app.Activity;
+import android.content.Context;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 /**
  * Created by vinay on 7/27/18.
  */
 
-public class GpsLogger {
+public class GpsLogger implements LocationListener{
 
+    Activity activity;
     LocationManager locationManager;
-    MyLocationListener locationListener;
+//    MyLocationListener locationListener;
+    FileWriter gpsWriter = null;
 
-//    public void requestLocation() {
-//        try {
-//            Location locationGps = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//            Location locationNetwork = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-//            TextView textView = (TextView) findViewById(R.id.textView);
-//
-//            if ((locationGps == null) && (locationNetwork == null)) {
-//                textView.append("\nLast Location Unknown");
-//            } else if ((locationGps != null) && (locationNetwork == null)) {
-//                textView.append("\nGPS Location: " + locationToString(locationGps));
-//                textView.append("\nNetwork Location: Unknown");
-//            } else if ((locationGps == null) && (locationNetwork != null)) {
-//                textView.append("\nGPS Location: Unknown");
-//                textView.append("\nNetwork Location: " +  locationToString(locationNetwork));
-//            } else if ((locationGps != null) && (locationNetwork != null)) {
-//                textView.append("\nGPS Location: " + locationToString(locationGps));
-//                textView.append("\nNetwork Location: "  + locationToString(locationNetwork));
-//            }
-//        } catch (SecurityException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    private String locationToString(Location loc) {
-//        String output = String.format("Time: %d Lat: %f Lon: %f Alt: %f Speed: %f Bearing: %f",
-//                loc.getTime(), loc.getLatitude(), loc.getLongitude(), loc.getAltitude(), loc.getSpeed(), loc.getBearing());
-//        return output;
-//    }
+    public GpsLogger(Activity activity) {
+        this.activity = activity;
+        locationManager = (LocationManager) activity.getSystemService(Context.LOCATION_SERVICE);
+//        locationListener = new MyLocationListener(activity);
+
+        if(PermissionsChecker.checkLocationPermissions(activity)) {
+            Toast.makeText(activity, "Location Permissions Enabled", Toast.LENGTH_SHORT).show();
+        } else {
+            PermissionsChecker.requestLocationPermissions(activity);
+            if (!PermissionsChecker.checkLocationPermissions(activity)) {
+                Toast.makeText(activity, "Location Permissions Not Granted", Toast.LENGTH_SHORT).show();
+            }
+            Toast.makeText(activity, "Location Permissions Granted", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void subscribeToGPS(){
+        TextView textView = (TextView) activity.findViewById(R.id.textView);
+        textView.append("\nStart button clicked!");
+        try {
+            gpsWriter = new FileWriter("GpsLog_" + HelperFunctions.getTimestamp() + ".txt", activity);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
+            requestLocation();
+
+        } catch (IOException | SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void unsubscribeToGPS() {
+        TextView textView = (TextView) activity.findViewById(R.id.textView);
+        textView.append("\nStop button clicked!");
+        locationManager.removeUpdates(this);
+    }
+
+    public String requestLocation() {
+        String locationResult = "";
+        try {
+            Location locationGps = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+            Location locationNetwork = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+            TextView textView = (TextView) activity.findViewById(R.id.textView);
+            Toast.makeText(activity, "Location Requested", Toast.LENGTH_SHORT).show();
+            Log.d("LocationRequest", "Location Requested");
+
+            String locationGpsResult = "\nGPS Location: " +
+                    (locationGps == null ? "Unknown" : HelperFunctions.locationToString(locationGps));
+            String locationNetworkResult = "\nNetwork Location: "  +
+                    (locationNetwork == null ? "Unknown" : HelperFunctions.locationToString(locationNetwork));
+            locationResult = locationGpsResult + locationNetworkResult;
+            textView.append(locationResult);
+
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+        return locationResult;
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        Toast.makeText(activity, "Location Update Received", Toast.LENGTH_SHORT).show();
+        ((TextView) activity.findViewById(R.id.textView)).append("\n" + HelperFunctions.locationToString(location));
+        try {
+            if (gpsWriter != null) {
+                gpsWriter.write(HelperFunctions.locationToString(location));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onStatusChanged(String s, int i, Bundle bundle) {
+        Toast.makeText(activity, "Location Status Changed", Toast.LENGTH_SHORT).show();
+        ((TextView) activity.findViewById(R.id.textView)).append("\nLocation Status Changed: " + s);
+    }
+
+    @Override
+    public void onProviderEnabled(String s) {
+        Toast.makeText(activity, "Location Provider Enabled", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+        Toast.makeText(activity, "Location Provider Disabled", Toast.LENGTH_SHORT).show();
+        ((TextView) activity.findViewById(R.id.textView)).append("\nLocation Provider Disabled: " + s);
+    }
 }

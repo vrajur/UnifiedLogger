@@ -1,4 +1,4 @@
 .git.bak
 build
 Application/build/
-.gradle/
+.gradle

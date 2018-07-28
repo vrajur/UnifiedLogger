@@ -3,6 +3,7 @@ package com.example.android.UnifiedLogger;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.location.Location;
 import android.view.View;
 
 import java.text.SimpleDateFormat;
@@ -22,6 +23,12 @@ public class HelperFunctions {
         Date date = new Date(Calendar.getInstance().getTimeInMillis());
         Date currentTime = Calendar.getInstance().getTime();
         return dateFormat.format(date);
+    }
+
+    static public String locationToString(Location loc) {
+        String output = String.format("Time: %d Lat: %f Lon: %f Alt: %f Speed: %f Bearing: %f",
+                loc.getTime(), loc.getLatitude(), loc.getLongitude(), loc.getAltitude(), loc.getSpeed(), loc.getBearing());
+        return output;
     }
 
     static public Activity getActivity(View view) {

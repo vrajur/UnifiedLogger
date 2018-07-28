@@ -76,7 +76,7 @@ public class Camera2VideoFragment extends Fragment
     private static final SparseIntArray DEFAULT_ORIENTATIONS = new SparseIntArray();
     private static final SparseIntArray INVERSE_ORIENTATIONS = new SparseIntArray();
 
-    private static final String TAG = "UnifiedLoggerCameraFragment";
+    private static final String TAG = "UnifiedLoggerFragment";
     private static final int REQUEST_VIDEO_PERMISSIONS = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
 
@@ -317,26 +317,35 @@ public class Camera2VideoFragment extends Fragment
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.video: {
-                if (mIsRecordingVideo) {
-                    stopRecordingVideo();
+        try {
+            switch (view.getId()) {
+                case R.id.video: {
+                    if (mIsRecordingVideo) {
+                        stopRecordingVideo();
+                        ((CameraActivity) getActivity()).gpsLogger.unsubscribeToGPS();
+//                        ((CameraActivity) getActivity()).sensorHandler.startLogging();
+                    } else {
+                        startRecordingVideo();
+                        ((CameraActivity)getActivity()).gpsLogger.subscribeToGPS();
+//                        ((CameraActivity) getActivity()).sensorHandler.stopLogging();
+                    }
+                    break;
+                }
+                case R.id.info: {
+                    Activity activity = getActivity();
+                    if (null != activity) {
+                        new AlertDialog.Builder(activity)
+                                .setMessage(R.string.intro_message)
+                                .setPositiveButton(android.R.string.ok, null)
+                                .show();
+                    }
+                    throw new IOException("vinay - remove this");
+//                    break;
+                }
 
-                } else {
-                    startRecordingVideo();
-                }
-                break;
             }
-            case R.id.info: {
-                Activity activity = getActivity();
-                if (null != activity) {
-                    new AlertDialog.Builder(activity)
-                            .setMessage(R.string.intro_message)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .show();
-                }
-                break;
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
