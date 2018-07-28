@@ -1,5 +1,10 @@
 package com.example.android.UnifiedLogger;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.view.View;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,5 +22,16 @@ public class HelperFunctions {
         Date date = new Date(Calendar.getInstance().getTimeInMillis());
         Date currentTime = Calendar.getInstance().getTime();
         return dateFormat.format(date);
+    }
+
+    static public Activity getActivity(View view) {
+        Context context = view.getContext();
+        while (context instanceof ContextWrapper) {
+            if (context instanceof Activity) {
+                return (Activity)context;
+            }
+            context = ((ContextWrapper)context).getBaseContext();
+        }
+        return null;
     }
 }

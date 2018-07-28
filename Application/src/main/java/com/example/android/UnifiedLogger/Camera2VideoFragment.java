@@ -54,6 +54,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -67,6 +68,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Camera2VideoFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
+
+    private TextView textView;
 
     private static final int SENSOR_ORIENTATION_DEFAULT_DEGREES = 90;
     private static final int SENSOR_ORIENTATION_INVERSE_DEGREES = 270;
@@ -282,8 +285,13 @@ public class Camera2VideoFragment extends Fragment
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
+        textView = (TextView) view.findViewById(R.id.textView);
+        textView.setWidth(mTextureView.getWidth());
+        textView.setHeight(mTextureView.getHeight());
         mButtonVideo = (Button) view.findViewById(R.id.video);
         mButtonVideo.setOnClickListener(this);
+        ButtonSetup.setup(view);
+
 //        view.findViewById(R.id.info).setOnClickListener(this);
     }
 
@@ -293,6 +301,8 @@ public class Camera2VideoFragment extends Fragment
         startBackgroundThread();
         if (mTextureView.isAvailable()) {
             openCamera(mTextureView.getWidth(), mTextureView.getHeight());
+            textView.setWidth(mTextureView.getWidth());
+            textView.setHeight(mTextureView.getHeight());
         } else {
             mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
         }
@@ -311,6 +321,7 @@ public class Camera2VideoFragment extends Fragment
             case R.id.video: {
                 if (mIsRecordingVideo) {
                     stopRecordingVideo();
+
                 } else {
                     startRecordingVideo();
                 }
@@ -673,6 +684,7 @@ public class Camera2VideoFragment extends Fragment
                     }
                 }
             }, mBackgroundHandler);
+            textView.append("\nRecording to: " + mNextVideoAbsolutePath);
         } catch (CameraAccessException | IOException e) {
             e.printStackTrace();
         }
@@ -696,9 +708,10 @@ public class Camera2VideoFragment extends Fragment
 
         Activity activity = getActivity();
         if (null != activity) {
-            Toast.makeText(activity, "Video saved: " + mNextVideoAbsolutePath,
-                    Toast.LENGTH_SHORT).show();
+//            Toast.makeText(activity, "Video saved: " + mNextVideoAbsolutePath,
+//                    Toast.LENGTH_SHORT).show();
             Log.d(TAG, "Video saved: " + mNextVideoAbsolutePath);
+            textView.append("\nVideo Saved: " + mNextVideoAbsolutePath);
         }
         mNextVideoAbsolutePath = null;
         startPreview();
