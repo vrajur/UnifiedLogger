@@ -21,13 +21,11 @@ public class GpsLogger implements LocationListener{
 
     Activity activity;
     LocationManager locationManager;
-//    MyLocationListener locationListener;
     FileWriter gpsWriter = null;
 
     public GpsLogger(Activity activity) {
         this.activity = activity;
-        locationManager = (LocationManager) activity.getSystemService(Context.LOCATION_SERVICE);
-//        locationListener = new MyLocationListener(activity);
+        TextView textView = activity.findViewById(R.id.textView);
 
         if(PermissionsChecker.checkLocationPermissions(activity)) {
             Toast.makeText(activity, "Location Permissions Enabled", Toast.LENGTH_SHORT).show();
@@ -38,16 +36,23 @@ public class GpsLogger implements LocationListener{
             }
             Toast.makeText(activity, "Location Permissions Granted", Toast.LENGTH_SHORT).show();
         }
+
+        locationManager = (LocationManager) activity.getSystemService(Context.LOCATION_SERVICE);
+        if (textView != null) {
+            textView.append("\nGPS Initialized");
+        }
     }
 
     public void subscribeToGPS(){
         TextView textView = (TextView) activity.findViewById(R.id.textView);
-        textView.append("\nStart button clicked!");
         Log.d("GPS", "Subscribed to GPS!");
         try {
             gpsWriter = new FileWriter("GpsLog_" + HelperFunctions.getTimestamp() + ".txt", activity);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
             requestLocation();
+            if (textView != null) {
+                textView.append("\nCreated: " + gpsWriter.filename);
+            }
 
         } catch (IOException | SecurityException e) {
             e.printStackTrace();
@@ -56,11 +61,16 @@ public class GpsLogger implements LocationListener{
 
     public void unsubscribeToGPS() {
         TextView textView = (TextView) activity.findViewById(R.id.textView);
-        textView.append("\nStop button clicked!");
+
         locationManager.removeUpdates(this);
         try {
             if (gpsWriter != null) {
                 gpsWriter.close();
+                if (textView != null) {
+                    textView.append(String.format(
+                            "\nClosed: %s [%d bytes]", gpsWriter.filename, gpsWriter.getFileSize()
+                    ));
+                }
                 gpsWriter = null;
             }
         } catch (IOException e) {
@@ -68,13 +78,18 @@ public class GpsLogger implements LocationListener{
         }
     }
 
+    // Just to overload function with default value
     public String requestLocation() {
+        return requestLocation(false);
+    }
+
+    public String requestLocation(boolean print) {
         String locationResult = "";
         try {
             Location locationGps = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
             Location locationNetwork = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            TextView textView = (TextView) activity.findViewById(R.id.textView);
-            Toast.makeText(activity, "Location Requested", Toast.LENGTH_SHORT).show();
+            TextView textView = activity.findViewById(R.id.textView);
+//            Toast.makeText(activity, "Location Requested", Toast.LENGTH_SHORT).show();
             Log.d("LocationRequest", "Location Requested");
 
             String locationGpsResult = "\nGPS Location: " +
@@ -82,7 +97,9 @@ public class GpsLogger implements LocationListener{
             String locationNetworkResult = "\nNetwork Location: "  +
                     (locationNetwork == null ? "Unknown" : HelperFunctions.locationToString(locationNetwork));
             locationResult = locationGpsResult + locationNetworkResult;
-            textView.append(locationResult);
+            if (print && textView != null) {
+                textView.append(locationResult);
+            }
 
         } catch (SecurityException e) {
             e.printStackTrace();
@@ -92,9 +109,12 @@ public class GpsLogger implements LocationListener{
 
     @Override
     public void onLocationChanged(Location location) {
-        Toast.makeText(activity, "Location Update Received", Toast.LENGTH_SHORT).show();
-        ((TextView) activity.findViewById(R.id.textView)).append("\n" + HelperFunctions.locationToString(location));
+//        Toast.makeText(activity, "Location Update Received", Toast.LENGTH_SHORT).show();
         try {
+//            TextView textView = activity.findViewById(R.id.textView);
+//            if (textView != null) {
+//                textView.append("\n" + HelperFunctions.locationToString(location));
+//            }
             if (gpsWriter != null) {
                 gpsWriter.write("\n" + HelperFunctions.locationToString(location));
             }
@@ -106,7 +126,10 @@ public class GpsLogger implements LocationListener{
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {
         Toast.makeText(activity, "Location Status Changed", Toast.LENGTH_SHORT).show();
-        ((TextView) activity.findViewById(R.id.textView)).append("\nLocation Status Changed: " + s);
+        TextView textView = activity.findViewById(R.id.textView);
+        if (textView != null) {
+            textView.append("\nLocation Status Changed: " + s);
+        }
     }
 
     @Override
@@ -117,6 +140,9 @@ public class GpsLogger implements LocationListener{
     @Override
     public void onProviderDisabled(String s) {
         Toast.makeText(activity, "Location Provider Disabled", Toast.LENGTH_SHORT).show();
-        ((TextView) activity.findViewById(R.id.textView)).append("\nLocation Provider Disabled: " + s);
+        TextView textView = activity.findViewById(R.id.textView);
+        if (textView != null) {
+            textView.append("\nLocation Provider Disabled: " + s);
+        }
     }
 }

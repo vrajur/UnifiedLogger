@@ -29,8 +29,6 @@ public class CameraActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-//        TextView textView = this.findViewById(R.id.textView);
-//        textView.setText("Camera Activity Initialized");
         gpsLogger = new GpsLogger(CameraActivity.this);
         sensorLogger = new SensorLogger(CameraActivity.this);
 

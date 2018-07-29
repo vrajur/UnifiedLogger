@@ -37,7 +37,9 @@ public class SensorLogger implements SensorEventListener {
         accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         gyroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         TextView textView = activity.findViewById(R.id.textView);
-        textView.append("\nSensors Initialized");
+        if (textView != null) {
+            textView.append("\n\tSensors Initialized");
+        }
         Log.d("Sensor", "Created sensor objects");
     }
 
@@ -47,7 +49,9 @@ public class SensorLogger implements SensorEventListener {
         if (accelWriter == null && accelActive == false) {
             String accelFile = "AccelerometerLog_" + HelperFunctions.getTimestamp() + ".txt";
             accelWriter = new FileWriter(accelFile, activity);
-            textView.append("\nCreated: " + accelFile);
+            if (textView != null) {
+                textView.append("\nCreated: " + accelFile);
+            }
 
             // Set Sensor Active and Register Listener:
             accelActive = true;
@@ -56,13 +60,14 @@ public class SensorLogger implements SensorEventListener {
         if (gyroWriter == null && gyroActive == false) {
             String gyroFile = "GyroscopeLog_" + HelperFunctions.getTimestamp() + ".txt";
             gyroWriter = new FileWriter(gyroFile, activity);
-            textView.append("\nCreated: " + gyroFile);
+            if (textView != null) {
+                textView.append("\nCreated: " + gyroFile);
+            }
 
             // Set Sensor Active and Register Listener:
             gyroActive = true;
             sensorManager.registerListener(this, gyroSensor, sensorManager.SENSOR_DELAY_FASTEST);
         }
-
     }
 
     public void stopLogging() throws IOException {
@@ -72,14 +77,22 @@ public class SensorLogger implements SensorEventListener {
         if (accelWriter != null) {
             accelActive = false;
             accelWriter.close();
-            textView.append("\nClosed: " + accelWriter.file.getName());
+            if (textView != null) {
+                textView.append(String.format(
+                        "\nClosed: %s [%d bytes]", accelWriter.filename, accelWriter.getFileSize()
+                ));
+            }
             accelWriter = null;
         }
 
         if (gyroWriter != null) {
             gyroActive = false;
             gyroWriter.close();
-            textView.append("\nClosed: " + gyroWriter.file.getName());
+            if (textView != null) {
+                textView.append(String.format(
+                        "\nClosed: %s [%d bytes]", gyroWriter.filename, gyroWriter.getFileSize()
+                ));
+            }
             gyroWriter = null;
         }
     }
@@ -92,14 +105,14 @@ public class SensorLogger implements SensorEventListener {
                     if (accelActive && accelWriter != null) {
                         String sensorData = String.format("%d; ACC; %f; %f; %f; %f; %f; %f\n", event.timestamp, event.values[0], event.values[1], event.values[2], 0.f, 0.f, 0.f);
                         accelWriter.write(sensorData);
-                        Log.d("Accelerometer", sensorData);
+//                        Log.d("Accelerometer", sensorData);
                     }
                     break;
                 case Sensor.TYPE_GYROSCOPE:
                     if (gyroActive && gyroWriter != null) {
                         String sensorData = String.format("%d; GYR; %f; %f; %f; %f; %f; %f\n", event.timestamp, event.values[0], event.values[1], event.values[2], 0.f, 0.f, 0.f);
                         gyroWriter.write(sensorData);
-                        Log.d("Gyroscope", sensorData);
+//                        Log.d("Gyroscope", sensorData);
                     }
                     break;
             }

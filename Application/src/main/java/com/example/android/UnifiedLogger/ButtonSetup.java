@@ -27,7 +27,7 @@ public class ButtonSetup {
 
         // Get textview:
         final TextView textView = (TextView) view.findViewById(R.id.textView);
-        textView.setText("UnifiedLogger:\nLogger Initialized");
+        textView.setText("Unified Logger:");
         textView.setMovementMethod(new ScrollingMovementMethod());
         Log.d("ButtonSetup", "TextView Created: " + textView.toString());
 
@@ -74,7 +74,7 @@ public class ButtonSetup {
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "Cleared Log", Toast.LENGTH_SHORT).show();
                 Log.d("ClearButton", "Cleared Log");
-                textView.setText("");
+                textView.setText("Unified Logger");
             }
         });
         hideLogButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

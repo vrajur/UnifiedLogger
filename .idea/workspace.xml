@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb7d638-9215-4d9d-b8f9-6728857e7238" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MySensorHandler.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -21,8 +19,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +51,8 @@
       <file leaf-file-name="ButtonSetup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -59,12 +61,9 @@
       <file leaf-file-name="HelperFunctions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="96">
               <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
-                <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,8 +71,8 @@
       <file leaf-file-name="CameraActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="35">
+              <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -82,8 +81,8 @@
       <file leaf-file-name="SensorLogger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="217">
+              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
               <folding>
                 <element signature="e#715#716#0" expanded="true" />
                 <element signature="e#755#756#0" expanded="true" />
@@ -92,45 +91,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Camera2VideoFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java">
+      <file leaf-file-name="FileWriter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="330" column="75" lean-forward="false" selection-start-line="330" selection-start-column="75" selection-end-line="330" selection-end-column="75" />
+            <state relative-caret-position="306">
+              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
               <folding>
-                <element signature="e#5051#5052#0" expanded="true" />
-                <element signature="e#5086#5087#0" expanded="true" />
-                <element signature="e#7331#7332#0" expanded="true" />
-                <element signature="e#7380#7381#0" expanded="true" />
-                <element signature="e#11884#11906#0" expanded="true" />
-                <marker date="1532825335162" expanded="false" signature="14405:14443" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-                <marker date="1532825335162" expanded="false" signature="14660:14698" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-                <marker date="1532825335162" expanded="false" signature="15352:15390" ph="/MissingPermission/" />
-                <marker date="1532825335162" expanded="false" signature="17977:18009" ph="&quot;This device doesn't support Camera2 API.&quot;" />
-                <marker date="1532825335162" expanded="false" signature="24491:24534" ph="&quot;UnifiedLogger&quot;" />
-                <marker date="1532825335162" expanded="false" signature="26315:26409" ph="() → {" />
-                <marker date="1532825335162" expanded="false" signature="26493:26506" ph="&quot;Stop&quot;" />
-                <marker date="1532825335162" expanded="false" signature="26683:26710" ph="}" />
-                <marker date="1532825335162" expanded="false" signature="27591:27605" ph="&quot;Start&quot;" />
-                <marker date="1532825335162" expanded="false" signature="29283:29442" ph="(dialogInterface, i) → {" />
-                <marker date="1532825335162" expanded="false" signature="29510:29537" ph="}" />
-                <marker date="1532825335162" expanded="false" signature="29888:29915" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-                <marker date="1532825335162" expanded="false" signature="29977:30131" ph="(dialog, which) → {" />
-                <marker date="1532825335162" expanded="false" signature="30305:30332" ph="}" />
-                <marker date="1532825335162" expanded="false" signature="30426:30596" ph="(dialog, which) → {" />
-                <marker date="1532825335162" expanded="false" signature="30692:30727" ph="}" />
+                <element signature="e#1988#1989#0" expanded="true" />
+                <element signature="e#2024#2025#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GpsLogger.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Camera2VideoFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="651" column="49" lean-forward="false" selection-start-line="651" selection-start-column="49" selection-end-line="651" selection-end-column="49" />
+              <folding>
+                <element signature="e#5051#5052#0" expanded="true" />
+                <element signature="e#5086#5087#0" expanded="true" />
+                <element signature="e#7366#7367#0" expanded="true" />
+                <element signature="e#7415#7416#0" expanded="true" />
+                <element signature="e#12127#12149#0" expanded="true" />
+                <marker date="1532829141541" expanded="false" signature="14648:14686" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532829141541" expanded="false" signature="14903:14941" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532829141541" expanded="false" signature="15595:15633" ph="/MissingPermission/" />
+                <marker date="1532829141541" expanded="false" signature="18220:18252" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+                <marker date="1532829141541" expanded="false" signature="24913:24956" ph="&quot;UnifiedLogger&quot;" />
+                <marker date="1532829141541" expanded="false" signature="26720:26814" ph="() → {" />
+                <marker date="1532829141541" expanded="false" signature="26898:26911" ph="&quot;Stop&quot;" />
+                <marker date="1532829141541" expanded="false" signature="27088:27115" ph="}" />
+                <marker date="1532829141541" expanded="false" signature="27983:27997" ph="&quot;Start&quot;" />
+                <marker date="1532829141541" expanded="false" signature="29805:29964" ph="(dialogInterface, i) → {" />
+                <marker date="1532829141541" expanded="false" signature="30032:30059" ph="}" />
+                <marker date="1532829141541" expanded="false" signature="30410:30437" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532829141541" expanded="false" signature="30499:30653" ph="(dialog, which) → {" />
+                <marker date="1532829141541" expanded="false" signature="30827:30854" ph="}" />
+                <marker date="1532829141541" expanded="false" signature="30948:31118" ph="(dialog, which) → {" />
+                <marker date="1532829141541" expanded="false" signature="31214:31249" ph="}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GpsLogger.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="116" column="15" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="116" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2791#2792#0" expanded="true" />
+                <element signature="e#2836#2837#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,29 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cam</find>
-      <find>came</find>
-      <find>camera</find>
-      <find>camera2</find>
-      <find>camera2v</find>
-      <find>camera2vid</find>
-      <find>camera2vide</find>
-      <find>camera2video</find>
-      <find>com.example.android.UnifiedLogger</find>
-      <find>com.example.android.</find>
-      <find>com.example.android.c</find>
-      <find>com.example.android.cam</find>
-      <find>com.example.android.camer</find>
-      <find>com.example.android.camera</find>
-      <find>com.example.android.camera2</find>
-      <find>Button</find>
-      <find>permission</find>
-      <find>setup</find>
-      <find>ButtonVid</find>
-      <find>textureView</find>
-      <find>textureView.</find>
-      <find>mtextureView</find>
-      <find>setAsp</find>
       <find>mTextureView</find>
       <find>external</find>
       <find>textView</find>
@@ -177,6 +168,29 @@
       <find>button</find>
       <find>onclick</find>
       <find>gpsLogger</find>
+      <find>Toast</find>
+      <find>openCamer</find>
+      <find>textView.</find>
+      <find>Recording to</find>
+      <find>pathPatart</find>
+      <find>Button clicked</find>
+      <find>GetVide</find>
+      <find>nam</find>
+      <find>print</find>
+      <find>lo</find>
+      <find>logger intiali</find>
+      <find>logger intial</find>
+      <find>logger intia</find>
+      <find>logger inti</find>
+      <find>logger int</find>
+      <find>logger in</find>
+      <find>logger ini</find>
+      <find>logger inita</find>
+      <find>logger init</find>
+      <find>clicked</find>
+      <find>buttonS</find>
+      <find>INit</find>
+      <find>getVide</find>
     </findStrings>
     <replaceStrings>
       <replace>View</replace>
@@ -1867,16 +1881,16 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_video.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/AutoFitTextureView.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_video.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
         <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MySensorHandler.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
       </list>
     </option>
   </component>
@@ -2047,7 +2061,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532825554564" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405774" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2095,7 +2109,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532825554564" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405775" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2291,7 +2305,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532825554568" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405777" />
       </method>
     </configuration>
     <list size="1">
@@ -2340,7 +2354,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2404,24 +2418,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="42" column="99" lean-forward="false" selection-start-line="42" selection-start-column="99" selection-end-line="42" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -2434,10 +2430,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
-            <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2456,25 +2449,25 @@
           <folding>
             <element signature="e#5051#5052#0" expanded="true" />
             <element signature="e#5086#5087#0" expanded="true" />
-            <element signature="e#7331#7332#0" expanded="true" />
-            <element signature="e#7380#7381#0" expanded="true" />
-            <element signature="e#11884#11906#0" expanded="true" />
-            <marker date="1532825335162" expanded="false" signature="14405:14443" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="14660:14698" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="15352:15390" ph="/MissingPermission/" />
-            <marker date="1532825335162" expanded="false" signature="17977:18009" ph="&quot;This device doesn't support Camera2 API.&quot;" />
-            <marker date="1532825335162" expanded="false" signature="24491:24534" ph="&quot;UnifiedLogger&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26315:26409" ph="() → {" />
-            <marker date="1532825335162" expanded="false" signature="26493:26506" ph="&quot;Stop&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26683:26710" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="27591:27605" ph="&quot;Start&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29283:29442" ph="(dialogInterface, i) → {" />
-            <marker date="1532825335162" expanded="false" signature="29510:29537" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="29888:29915" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29977:30131" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30305:30332" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="30426:30596" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30692:30727" ph="}" />
+            <element signature="e#7366#7367#0" expanded="true" />
+            <element signature="e#7415#7416#0" expanded="true" />
+            <element signature="e#12127#12149#0" expanded="true" />
+            <marker date="1532829141541" expanded="false" signature="14648:14686" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="14903:14941" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="15595:15633" ph="/MissingPermission/" />
+            <marker date="1532829141541" expanded="false" signature="18220:18252" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532829141541" expanded="false" signature="24913:24956" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532829141541" expanded="false" signature="26720:26814" ph="() → {" />
+            <marker date="1532829141541" expanded="false" signature="26898:26911" ph="&quot;Stop&quot;" />
+            <marker date="1532829141541" expanded="false" signature="27088:27115" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="27983:27997" ph="&quot;Start&quot;" />
+            <marker date="1532829141541" expanded="false" signature="29805:29964" ph="(dialogInterface, i) → {" />
+            <marker date="1532829141541" expanded="false" signature="30032:30059" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30410:30437" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="30499:30653" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="30827:30854" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30948:31118" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="31214:31249" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2502,6 +2495,8 @@
           <caret line="42" column="7" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="42" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2791#2792#0" expanded="true" />
+            <element signature="e#2836#2837#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2549,25 +2544,25 @@
           <folding>
             <element signature="e#5051#5052#0" expanded="true" />
             <element signature="e#5086#5087#0" expanded="true" />
-            <element signature="e#7331#7332#0" expanded="true" />
-            <element signature="e#7380#7381#0" expanded="true" />
-            <element signature="e#11884#11906#0" expanded="true" />
-            <marker date="1532825335162" expanded="false" signature="14405:14443" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="14660:14698" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="15352:15390" ph="/MissingPermission/" />
-            <marker date="1532825335162" expanded="false" signature="17977:18009" ph="&quot;This device doesn't support Camera2 API.&quot;" />
-            <marker date="1532825335162" expanded="false" signature="24491:24534" ph="&quot;UnifiedLogger&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26315:26409" ph="() → {" />
-            <marker date="1532825335162" expanded="false" signature="26493:26506" ph="&quot;Stop&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26683:26710" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="27591:27605" ph="&quot;Start&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29283:29442" ph="(dialogInterface, i) → {" />
-            <marker date="1532825335162" expanded="false" signature="29510:29537" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="29888:29915" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29977:30131" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30305:30332" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="30426:30596" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30692:30727" ph="}" />
+            <element signature="e#7366#7367#0" expanded="true" />
+            <element signature="e#7415#7416#0" expanded="true" />
+            <element signature="e#12127#12149#0" expanded="true" />
+            <marker date="1532829141541" expanded="false" signature="14648:14686" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="14903:14941" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="15595:15633" ph="/MissingPermission/" />
+            <marker date="1532829141541" expanded="false" signature="18220:18252" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532829141541" expanded="false" signature="24913:24956" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532829141541" expanded="false" signature="26720:26814" ph="() → {" />
+            <marker date="1532829141541" expanded="false" signature="26898:26911" ph="&quot;Stop&quot;" />
+            <marker date="1532829141541" expanded="false" signature="27088:27115" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="27983:27997" ph="&quot;Start&quot;" />
+            <marker date="1532829141541" expanded="false" signature="29805:29964" ph="(dialogInterface, i) → {" />
+            <marker date="1532829141541" expanded="false" signature="30032:30059" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30410:30437" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="30499:30653" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="30827:30854" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30948:31118" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="31214:31249" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2755,34 +2750,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="907">
-          <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#755#756#0" expanded="false" />
-            <element signature="e#784#785#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/java/io/IOException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
-            <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2797,14 +2769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -2813,28 +2777,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+        <state relative-caret-position="128">
+          <caret line="334" column="19" lean-forward="false" selection-start-line="334" selection-start-column="19" selection-end-line="334" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#15734#15735#0" expanded="true" />
+            <element signature="e#15785#15786#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+          <folding>
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2024#2025#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-27/android.jar!/android/media/MediaRecorder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="119" column="16" lean-forward="false" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="35">
+          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state relative-caret-position="217">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding>
             <element signature="e#715#716#0" expanded="true" />
             <element signature="e#755#756#0" expanded="true" />
@@ -2844,30 +2844,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="330" column="75" lean-forward="false" selection-start-line="330" selection-start-column="75" selection-end-line="330" selection-end-column="75" />
+        <state relative-caret-position="19">
+          <caret line="651" column="49" lean-forward="false" selection-start-line="651" selection-start-column="49" selection-end-line="651" selection-end-column="49" />
           <folding>
             <element signature="e#5051#5052#0" expanded="true" />
             <element signature="e#5086#5087#0" expanded="true" />
-            <element signature="e#7331#7332#0" expanded="true" />
-            <element signature="e#7380#7381#0" expanded="true" />
-            <element signature="e#11884#11906#0" expanded="true" />
-            <marker date="1532825335162" expanded="false" signature="14405:14443" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="14660:14698" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="15352:15390" ph="/MissingPermission/" />
-            <marker date="1532825335162" expanded="false" signature="17977:18009" ph="&quot;This device doesn't support Camera2 API.&quot;" />
-            <marker date="1532825335162" expanded="false" signature="24491:24534" ph="&quot;UnifiedLogger&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26315:26409" ph="() → {" />
-            <marker date="1532825335162" expanded="false" signature="26493:26506" ph="&quot;Stop&quot;" />
-            <marker date="1532825335162" expanded="false" signature="26683:26710" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="27591:27605" ph="&quot;Start&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29283:29442" ph="(dialogInterface, i) → {" />
-            <marker date="1532825335162" expanded="false" signature="29510:29537" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="29888:29915" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
-            <marker date="1532825335162" expanded="false" signature="29977:30131" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30305:30332" ph="}" />
-            <marker date="1532825335162" expanded="false" signature="30426:30596" ph="(dialog, which) → {" />
-            <marker date="1532825335162" expanded="false" signature="30692:30727" ph="}" />
+            <element signature="e#7366#7367#0" expanded="true" />
+            <element signature="e#7415#7416#0" expanded="true" />
+            <element signature="e#12127#12149#0" expanded="true" />
+            <marker date="1532829141541" expanded="false" signature="14648:14686" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="14903:14941" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="15595:15633" ph="/MissingPermission/" />
+            <marker date="1532829141541" expanded="false" signature="18220:18252" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532829141541" expanded="false" signature="24913:24956" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532829141541" expanded="false" signature="26720:26814" ph="() → {" />
+            <marker date="1532829141541" expanded="false" signature="26898:26911" ph="&quot;Stop&quot;" />
+            <marker date="1532829141541" expanded="false" signature="27088:27115" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="27983:27997" ph="&quot;Start&quot;" />
+            <marker date="1532829141541" expanded="false" signature="29805:29964" ph="(dialogInterface, i) → {" />
+            <marker date="1532829141541" expanded="false" signature="30032:30059" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30410:30437" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532829141541" expanded="false" signature="30499:30653" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="30827:30854" ph="}" />
+            <marker date="1532829141541" expanded="false" signature="30948:31118" ph="(dialog, which) → {" />
+            <marker date="1532829141541" expanded="false" signature="31214:31249" ph="}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="116" column="15" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="116" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2791#2792#0" expanded="true" />
+            <element signature="e#2836#2837#0" expanded="true" />
           </folding>
         </state>
       </provider>

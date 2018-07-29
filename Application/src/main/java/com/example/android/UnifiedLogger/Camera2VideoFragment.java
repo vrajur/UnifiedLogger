@@ -221,6 +221,7 @@ public class Camera2VideoFragment extends Fragment
     };
     private Integer mSensorOrientation;
     private String mNextVideoAbsolutePath;
+    private String mNextVideoName;
     private CaptureRequest.Builder mPreviewBuilder;
 
     public static Camera2VideoFragment newInstance() {
@@ -292,6 +293,9 @@ public class Camera2VideoFragment extends Fragment
         mButtonVideo.setOnClickListener(this);
         ButtonSetup.setup(view);
         ((CameraActivity) getActivity()).sensorLogger.initializeSensors();
+        if (textView != null) {
+            textView.append("\n\tGPS Initialized");
+        }
 
 //        view.findViewById(R.id.info).setOnClickListener(this);
     }
@@ -311,6 +315,10 @@ public class Camera2VideoFragment extends Fragment
 
     @Override
     public void onPause() {
+        if (mIsRecordingVideo) {
+            // Stop recording
+            mButtonVideo.performClick();
+        }
         closeCamera();
         stopBackgroundThread();
         super.onPause();
@@ -489,6 +497,7 @@ public class Camera2VideoFragment extends Fragment
         } catch (InterruptedException e) {
             throw new RuntimeException("Interrupted while trying to lock camera opening.");
         }
+        textView.append("\n\tCamera Initialized");
     }
 
     private void closeCamera() {
@@ -612,6 +621,8 @@ public class Camera2VideoFragment extends Fragment
         mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
         if (mNextVideoAbsolutePath == null || mNextVideoAbsolutePath.isEmpty()) {
             mNextVideoAbsolutePath = getVideoFilePath(getActivity());
+            String[] pathParts = mNextVideoAbsolutePath.split("/");
+            mNextVideoName = pathParts[pathParts.length-1];
         }
         mMediaRecorder.setOutputFile(mNextVideoAbsolutePath);
         mMediaRecorder.setVideoEncodingBitRate(10000000);
@@ -638,8 +649,8 @@ public class Camera2VideoFragment extends Fragment
         if (!path.exists()) {
             path.mkdirs();
         }
-        File file = new File(path,System.currentTimeMillis() + ".mp4");
-        return (path == null ? "" : (path.getAbsolutePath() + "/")) + HelperFunctions.getTimestamp() + "_vinay.mp4";
+        textView.append("\nLogging to: " + path);
+        return (path == null ? "" : (path.getAbsolutePath() + "/")) + "Video_" + HelperFunctions.getTimestamp() + ".mp4";
     }
 
     private void startRecordingVideo() {
@@ -694,7 +705,7 @@ public class Camera2VideoFragment extends Fragment
                     }
                 }
             }, mBackgroundHandler);
-            textView.append("\nRecording to: " + mNextVideoAbsolutePath);
+            textView.append("\nCreated: " + mNextVideoName);
         } catch (CameraAccessException | IOException e) {
             e.printStackTrace();
         }
@@ -720,8 +731,11 @@ public class Camera2VideoFragment extends Fragment
         if (null != activity) {
 //            Toast.makeText(activity, "Video saved: " + mNextVideoAbsolutePath,
 //                    Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "Video saved: " + mNextVideoAbsolutePath);
-            textView.append("\nVideo Saved: " + mNextVideoAbsolutePath);
+            Log.d(TAG, "Closed: " + mNextVideoName);
+            long recordingLength = new File(mNextVideoAbsolutePath).length();
+            textView.append(String.format(
+                    "\nClosed: %s [%d bytes]", mNextVideoName, recordingLength
+            ));
         }
         mNextVideoAbsolutePath = null;
         startPreview();

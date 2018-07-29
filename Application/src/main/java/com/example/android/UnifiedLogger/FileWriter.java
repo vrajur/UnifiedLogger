@@ -15,8 +15,14 @@ import java.io.OutputStreamWriter;
 
 public class FileWriter {
 
+    boolean valid = false;
+    public File file;
+    public String filename;
+    public FileOutputStream stream;
+    public OutputStreamWriter writer;
+
     public FileWriter(String fileName, Activity activity) throws IOException {
-        this.file = getPublicDirectory(fileName, activity);
+        this.file = getFile(fileName, activity);
         if (!this.file.createNewFile()) {
             Log.e("createFile", "Failed to create file: " + this.file.getPath());
         }
@@ -43,14 +49,9 @@ public class FileWriter {
         }
     }
 
-    boolean valid = false;
-    public File file;
-    public FileOutputStream stream;
-    public OutputStreamWriter writer;
-
 
     /* Gets File */
-    public File getPublicDirectory(String fileName, Activity activity) {
+    public File getFile(String filename, Activity activity) {
 
         // Get Permissions:
         Log.d("createFile", "Checking File Permissions");
@@ -65,22 +66,12 @@ public class FileWriter {
         if (!path.exists()) {
             path.mkdirs();
         }
-        File file = new File(path, fileName);
+        File file = new File(path, filename);
+        this.filename = filename;
         return file;
-
-//        File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-//
-//        File[] files = path.listFiles();
-//        path = new File(path, "/UnifiedLogger/");
-//        Log.d("dbg", "Files in: " + path.getPath());
-//        for(File file : files) {
-//            Log.d("dbg", "\t" + file.getPath());
-//        }
-//        if (!path.mkdirs()) {
-//            Log.e("ERR", "File not created: " + path);
-//        }
-//        File file = new File(path, fileName);
-//        return file;
     }
 
+    public long getFileSize() {
+        return file.length();
+    }
 }
