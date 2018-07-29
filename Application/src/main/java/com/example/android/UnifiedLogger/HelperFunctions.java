@@ -25,9 +25,9 @@ public class HelperFunctions {
         return dateFormat.format(date);
     }
 
-    static public String locationToString(Location loc) {
+    static public String locationToString(Location loc, long startupTime) {
         String output = String.format("Time: %d Lat: %f Lon: %f Alt: %f Speed: %f Bearing: %f",
-                loc.getTime(), loc.getLatitude(), loc.getLongitude(), loc.getAltitude(), loc.getSpeed(), loc.getBearing());
+                loc.getTime()-startupTime, loc.getLatitude(), loc.getLongitude(), loc.getAltitude(), loc.getSpeed(), loc.getBearing());
         return output;
     }
 

@@ -19,12 +19,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +57,8 @@
       <file leaf-file-name="HelperFunctions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="360">
+              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -139,12 +135,12 @@
       <file leaf-file-name="GpsLogger.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="116" column="15" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="116" selection-end-column="15" />
+            <state relative-caret-position="44">
+              <caret line="25" column="126" lean-forward="false" selection-start-line="25" selection-start-column="126" selection-end-line="25" selection-end-column="126" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2791#2792#0" expanded="true" />
-                <element signature="e#2836#2837#0" expanded="true" />
+                <element signature="e#3031#3032#0" expanded="true" />
+                <element signature="e#3076#3077#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mTextureView</find>
       <find>external</find>
       <find>textView</find>
       <find>activity</find>
@@ -176,7 +171,6 @@
       <find>Button clicked</find>
       <find>GetVide</find>
       <find>nam</find>
-      <find>print</find>
       <find>lo</find>
       <find>logger intiali</find>
       <find>logger intial</find>
@@ -187,10 +181,12 @@
       <find>logger ini</find>
       <find>logger inita</find>
       <find>logger init</find>
-      <find>clicked</find>
       <find>buttonS</find>
       <find>INit</find>
       <find>getVide</find>
+      <find>print</find>
+      <find>clicked</find>
+      <find>Helper</find>
     </findStrings>
     <replaceStrings>
       <replace>View</replace>
@@ -1881,7 +1877,6 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_video.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/AutoFitTextureView.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_video.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" />
         <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MySensorHandler.java" />
@@ -1890,6 +1885,7 @@
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/SensorLogger.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
       </list>
     </option>
@@ -2061,7 +2057,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405774" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829961374" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2109,7 +2105,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405775" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829961375" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2305,7 +2301,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829405777" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532829961378" />
       </method>
     </configuration>
     <list size="1">
@@ -2495,8 +2491,8 @@
           <caret line="42" column="7" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="42" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2791#2792#0" expanded="true" />
-            <element signature="e#2836#2837#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2815,14 +2811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
@@ -2872,14 +2860,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="116" column="15" lean-forward="false" selection-start-line="113" selection-start-column="14" selection-end-line="116" selection-end-column="15" />
+        <state relative-caret-position="44">
+          <caret line="25" column="126" lean-forward="false" selection-start-line="25" selection-start-column="126" selection-end-line="25" selection-end-column="126" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2791#2792#0" expanded="true" />
-            <element signature="e#2836#2837#0" expanded="true" />
+            <element signature="e#3031#3032#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
           </folding>
         </state>
       </provider>

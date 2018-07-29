@@ -6,6 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -22,10 +23,12 @@ public class GpsLogger implements LocationListener{
     Activity activity;
     LocationManager locationManager;
     FileWriter gpsWriter = null;
+    long startupTime; // see here: https://stackoverflow.com/questions/10773505/android-gps-timestamp-vs-sensorevent-timestamp
 
     public GpsLogger(Activity activity) {
         this.activity = activity;
         TextView textView = activity.findViewById(R.id.textView);
+        startupTime = System.currentTimeMillis() - SystemClock.elapsedRealtime();
 
         if(PermissionsChecker.checkLocationPermissions(activity)) {
             Toast.makeText(activity, "Location Permissions Enabled", Toast.LENGTH_SHORT).show();
@@ -93,9 +96,9 @@ public class GpsLogger implements LocationListener{
             Log.d("LocationRequest", "Location Requested");
 
             String locationGpsResult = "\nGPS Location: " +
-                    (locationGps == null ? "Unknown" : HelperFunctions.locationToString(locationGps));
+                    (locationGps == null ? "Unknown" : HelperFunctions.locationToString(locationGps, startupTime));
             String locationNetworkResult = "\nNetwork Location: "  +
-                    (locationNetwork == null ? "Unknown" : HelperFunctions.locationToString(locationNetwork));
+                    (locationNetwork == null ? "Unknown" : HelperFunctions.locationToString(locationNetwork, startupTime));
             locationResult = locationGpsResult + locationNetworkResult;
             if (print && textView != null) {
                 textView.append(locationResult);
@@ -116,7 +119,7 @@ public class GpsLogger implements LocationListener{
 //                textView.append("\n" + HelperFunctions.locationToString(location));
 //            }
             if (gpsWriter != null) {
-                gpsWriter.write("\n" + HelperFunctions.locationToString(location));
+                gpsWriter.write("\n" + HelperFunctions.locationToString(location, startupTime));
             }
         } catch (IOException e) {
             e.printStackTrace();
