@@ -21,6 +21,7 @@
 
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
 
+    <!--<uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" /> -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA"/>

@@ -23,7 +23,7 @@ public class ButtonSetup {
         Log.d("ButtonSetup", "Setup started");
 
         // Setup Location Listener:
-        MyLocationListener listener;
+//        MyLocationListener listener;
 
         // Get textview:
         final TextView textView = (TextView) view.findViewById(R.id.textView);

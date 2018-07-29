@@ -12,22 +12,16 @@
     <list default="true" id="adb7d638-9215-4d9d-b8f9-6728857e7238" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,22 +45,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelperFunctions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
+      <file leaf-file-name="ButtonSetup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="182">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ButtonSetup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
+      <file leaf-file-name="HelperFunctions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="288">
+              <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
+                <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,8 +71,8 @@
       <file leaf-file-name="CameraActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+            <state relative-caret-position="216">
+              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -85,8 +82,30 @@
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
-              <caret line="328" column="81" lean-forward="false" selection-start-line="328" selection-start-column="81" selection-end-line="328" selection-end-column="81" />
-              <folding />
+              <caret line="328" column="65" lean-forward="false" selection-start-line="328" selection-start-column="56" selection-end-line="328" selection-end-column="65" />
+              <folding>
+                <element signature="e#5051#5052#0" expanded="true" />
+                <element signature="e#5086#5087#0" expanded="true" />
+                <element signature="e#7331#7332#0" expanded="true" />
+                <element signature="e#7380#7381#0" expanded="true" />
+                <element signature="e#11815#11837#0" expanded="true" />
+                <marker date="1532820544115" expanded="false" signature="14336:14374" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532820544115" expanded="false" signature="14591:14629" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532820544115" expanded="false" signature="15283:15321" ph="/MissingPermission/" />
+                <marker date="1532820544115" expanded="false" signature="17908:17940" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+                <marker date="1532820544115" expanded="false" signature="24422:24465" ph="&quot;UnifiedLogger&quot;" />
+                <marker date="1532820544115" expanded="false" signature="26246:26340" ph="() → {" />
+                <marker date="1532820544115" expanded="false" signature="26424:26437" ph="&quot;Stop&quot;" />
+                <marker date="1532820544115" expanded="false" signature="26614:26641" ph="}" />
+                <marker date="1532820544115" expanded="false" signature="27522:27536" ph="&quot;Start&quot;" />
+                <marker date="1532820544115" expanded="false" signature="29214:29373" ph="(dialogInterface, i) → {" />
+                <marker date="1532820544115" expanded="false" signature="29441:29468" ph="}" />
+                <marker date="1532820544115" expanded="false" signature="29819:29846" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+                <marker date="1532820544115" expanded="false" signature="29908:30062" ph="(dialog, which) → {" />
+                <marker date="1532820544115" expanded="false" signature="30236:30263" ph="}" />
+                <marker date="1532820544115" expanded="false" signature="30357:30527" ph="(dialog, which) → {" />
+                <marker date="1532820544115" expanded="false" signature="30623:30658" ph="}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,58 +113,11 @@
       <file leaf-file-name="GpsLogger.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1073">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="62" />
+            <state relative-caret-position="124">
+              <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyLocationListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="44" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySensorHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MySensorHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-551">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="907">
-              <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#755#756#0" expanded="false" />
-                <element signature="e#784#785#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ca</find>
       <find>cam</find>
       <find>came</find>
       <find>camera</find>
@@ -186,11 +157,12 @@
       <find>mtextureView</find>
       <find>setAsp</find>
       <find>mTextureView</find>
-      <find>onclick</find>
       <find>external</find>
       <find>textView</find>
       <find>activity</find>
       <find>button</find>
+      <find>onclick</find>
+      <find>gpsLogger</find>
     </findStrings>
     <replaceStrings>
       <replace>View</replace>
@@ -1878,17 +1850,17 @@
         <option value="$PROJECT_DIR$/Application/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/activity_camera.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MainActivityButtonSetup.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout/fragment_camera2_video.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/AutoFitTextureView.java" />
         <option value="$PROJECT_DIR$/Application/src/main/res/layout-land/fragment_camera2_video.xml" />
-        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java" />
-        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
         <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java" />
+        <option value="$PROJECT_DIR$/Application/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java" />
       </list>
     </option>
   </component>
@@ -2059,7 +2031,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532819148452" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532824814872" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2107,7 +2079,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532819148452" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532824814872" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2152,27 +2124,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2303,7 +2254,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532819148461" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1532824814877" />
       </method>
     </configuration>
     <list size="1">
@@ -2352,7 +2303,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2374,13 +2325,38 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280881" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940991" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2395,7 +2371,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="42" column="99" lean-forward="false" selection-start-line="42" selection-start-column="99" selection-end-line="42" selection-end-column="99" />
-          <folding />
+          <folding>
+            <element signature="e#0#1547#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2421,7 +2399,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
+          <folding>
+            <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
+            <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2437,7 +2418,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10638">
           <caret line="591" column="20" lean-forward="false" selection-start-line="591" selection-start-column="8" selection-end-line="591" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#5051#5052#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#7331#7332#0" expanded="true" />
+            <element signature="e#7380#7381#0" expanded="true" />
+            <element signature="e#11815#11837#0" expanded="true" />
+            <marker date="1532820544115" expanded="false" signature="14336:14374" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="14591:14629" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="15283:15321" ph="/MissingPermission/" />
+            <marker date="1532820544115" expanded="false" signature="17908:17940" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532820544115" expanded="false" signature="24422:24465" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26246:26340" ph="() → {" />
+            <marker date="1532820544115" expanded="false" signature="26424:26437" ph="&quot;Stop&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26614:26641" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="27522:27536" ph="&quot;Start&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29214:29373" ph="(dialogInterface, i) → {" />
+            <marker date="1532820544115" expanded="false" signature="29441:29468" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="29819:29846" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29908:30062" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30236:30263" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="30357:30527" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30623:30658" ph="}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2472,7 +2475,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#1547#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2508,7 +2513,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10188">
           <caret line="631" column="24" lean-forward="false" selection-start-line="631" selection-start-column="21" selection-end-line="631" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#5051#5052#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#7331#7332#0" expanded="true" />
+            <element signature="e#7380#7381#0" expanded="true" />
+            <element signature="e#11815#11837#0" expanded="true" />
+            <marker date="1532820544115" expanded="false" signature="14336:14374" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="14591:14629" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="15283:15321" ph="/MissingPermission/" />
+            <marker date="1532820544115" expanded="false" signature="17908:17940" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532820544115" expanded="false" signature="24422:24465" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26246:26340" ph="() → {" />
+            <marker date="1532820544115" expanded="false" signature="26424:26437" ph="&quot;Stop&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26614:26641" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="27522:27536" ph="&quot;Start&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29214:29373" ph="(dialogInterface, i) → {" />
+            <marker date="1532820544115" expanded="false" signature="29441:29468" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="29819:29846" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29908:30062" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30236:30263" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="30357:30527" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30623:30658" ph="}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2517,7 +2544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2553,7 +2579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2627,7 +2652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2635,7 +2659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2699,17 +2722,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/FileWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="907">
@@ -2730,22 +2742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MySensorHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-551">
@@ -2756,8 +2752,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/HelperFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="288">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <marker date="1532820544115" expanded="true" signature="1005:1012" ph="{...}" />
+            <marker date="1532820544115" expanded="true" signature="1064:1368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="24" column="78" lean-forward="true" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/ButtonSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2765,23 +2793,45 @@
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/Camera2VideoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
-          <caret line="328" column="81" lean-forward="false" selection-start-line="328" selection-start-column="81" selection-end-line="328" selection-end-column="81" />
-          <folding />
+          <caret line="328" column="65" lean-forward="false" selection-start-line="328" selection-start-column="56" selection-end-line="328" selection-end-column="65" />
+          <folding>
+            <element signature="e#5051#5052#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#7331#7332#0" expanded="true" />
+            <element signature="e#7380#7381#0" expanded="true" />
+            <element signature="e#11815#11837#0" expanded="true" />
+            <marker date="1532820544115" expanded="false" signature="14336:14374" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="14591:14629" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="15283:15321" ph="/MissingPermission/" />
+            <marker date="1532820544115" expanded="false" signature="17908:17940" ph="&quot;This device doesn't support Camera2 API.&quot;" />
+            <marker date="1532820544115" expanded="false" signature="24422:24465" ph="&quot;UnifiedLogger&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26246:26340" ph="() → {" />
+            <marker date="1532820544115" expanded="false" signature="26424:26437" ph="&quot;Stop&quot;" />
+            <marker date="1532820544115" expanded="false" signature="26614:26641" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="27522:27536" ph="&quot;Start&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29214:29373" ph="(dialogInterface, i) → {" />
+            <marker date="1532820544115" expanded="false" signature="29441:29468" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="29819:29846" ph="&quot;This sample needs permission for camera and audio recor...&quot;" />
+            <marker date="1532820544115" expanded="false" signature="29908:30062" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30236:30263" ph="}" />
+            <marker date="1532820544115" expanded="false" signature="30357:30527" ph="(dialog, which) → {" />
+            <marker date="1532820544115" expanded="false" signature="30623:30658" ph="}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/MyLocationListener.java">
+    <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/CameraActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/src/main/java/com/example/android/UnifiedLogger/GpsLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1073">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="62" />
+        <state relative-caret-position="124">
+          <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

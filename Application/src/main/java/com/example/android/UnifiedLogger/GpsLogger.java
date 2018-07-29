@@ -43,6 +43,7 @@ public class GpsLogger implements LocationListener{
     public void subscribeToGPS(){
         TextView textView = (TextView) activity.findViewById(R.id.textView);
         textView.append("\nStart button clicked!");
+        Log.d("GPS", "Subscribed to GPS!");
         try {
             gpsWriter = new FileWriter("GpsLog_" + HelperFunctions.getTimestamp() + ".txt", activity);
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this);
@@ -57,6 +58,14 @@ public class GpsLogger implements LocationListener{
         TextView textView = (TextView) activity.findViewById(R.id.textView);
         textView.append("\nStop button clicked!");
         locationManager.removeUpdates(this);
+        try {
+            if (gpsWriter != null) {
+                gpsWriter.close();
+                gpsWriter = null;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public String requestLocation() {
@@ -87,7 +96,7 @@ public class GpsLogger implements LocationListener{
         ((TextView) activity.findViewById(R.id.textView)).append("\n" + HelperFunctions.locationToString(location));
         try {
             if (gpsWriter != null) {
-                gpsWriter.write(HelperFunctions.locationToString(location));
+                gpsWriter.write("\n" + HelperFunctions.locationToString(location));
             }
         } catch (IOException e) {
             e.printStackTrace();
