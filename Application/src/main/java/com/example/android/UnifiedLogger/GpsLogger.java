@@ -28,7 +28,7 @@ public class GpsLogger implements LocationListener{
     public GpsLogger(Activity activity) {
         this.activity = activity;
         TextView textView = activity.findViewById(R.id.textView);
-        startupTime = System.currentTimeMillis() - SystemClock.elapsedRealtime();
+        startupTime = System.currentTimeMillis() - SystemClock.elapsedRealtimeNanos(); // Using nanos for all sensors
 
         if(PermissionsChecker.checkLocationPermissions(activity)) {
             Toast.makeText(activity, "Location Permissions Enabled", Toast.LENGTH_SHORT).show();

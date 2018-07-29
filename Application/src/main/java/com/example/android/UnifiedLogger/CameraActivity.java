@@ -18,17 +18,24 @@ package com.example.android.UnifiedLogger;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 public class CameraActivity extends Activity {
 
     GpsLogger gpsLogger;
     SensorLogger sensorLogger;
+    CameraLogger camLogger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+        // Disable Screen Timeout:
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        // To enable timeout again: getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        camLogger = new CameraLogger(CameraActivity.this);
         gpsLogger = new GpsLogger(CameraActivity.this);
         sensorLogger = new SensorLogger(CameraActivity.this);
 

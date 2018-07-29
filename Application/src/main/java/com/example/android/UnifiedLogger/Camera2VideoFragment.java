@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
@@ -326,22 +327,27 @@ public class Camera2VideoFragment extends Fragment
 
     @Override
     public void onClick(View view) {
+        CameraActivity activity = (CameraActivity) getActivity();
+        if (activity == null) {
+            return;
+        }
         try {
             switch (view.getId()) {
                 case R.id.video: {
                     if (mIsRecordingVideo) {
                         stopRecordingVideo();
-                        ((CameraActivity) getActivity()).gpsLogger.unsubscribeToGPS();
-                        ((CameraActivity) getActivity()).sensorLogger.stopLogging();
+                        activity.gpsLogger.unsubscribeToGPS();
+                        activity.sensorLogger.stopLogging();
+                        activity.camLogger.stopLogging();
                     } else {
                         startRecordingVideo();
-                        ((CameraActivity)getActivity()).gpsLogger.subscribeToGPS();
-                        ((CameraActivity) getActivity()).sensorLogger.startLogging();
+                        activity.gpsLogger.subscribeToGPS();
+                        activity.sensorLogger.startLogging();
+                        activity.camLogger.startLogging(mNextVideoName);
                     }
                     break;
                 }
                 case R.id.info: {
-                    Activity activity = getActivity();
                     if (null != activity) {
                         new AlertDialog.Builder(activity)
                                 .setMessage(R.string.intro_message)
@@ -467,6 +473,9 @@ public class Camera2VideoFragment extends Fragment
 
             // Choose the sizes for camera preview and video recording
             CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraId);
+            // TODO remove:
+//            textView.append("Camera Characteristics: " + characteristics.get(CameraCharacteristics.SENSOR_INFO_TIMESTAMP_SOURCE));
+//            textView.append("\t[0: UNKNOWN, 1: REALTIME]");
             StreamConfigurationMap map = characteristics
                     .get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             mSensorOrientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
@@ -569,7 +578,7 @@ public class Camera2VideoFragment extends Fragment
             setUpCaptureRequestBuilder(mPreviewBuilder);
             HandlerThread thread = new HandlerThread("CameraPreview");
             thread.start();
-            mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), null, mBackgroundHandler);
+            mPreviewSession.setRepeatingRequest(mPreviewBuilder.build(), ((CameraActivity) getActivity()).camLogger, mBackgroundHandler);
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
@@ -683,7 +692,6 @@ public class Camera2VideoFragment extends Fragment
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
                     mPreviewSession = cameraCaptureSession;
-                    updatePreview();
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -695,6 +703,7 @@ public class Camera2VideoFragment extends Fragment
                             mMediaRecorder.start();
                         }
                     });
+                    updatePreview();
                 }
 
                 @Override
