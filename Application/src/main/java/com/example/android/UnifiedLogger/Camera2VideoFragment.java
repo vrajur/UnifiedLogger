@@ -291,6 +291,7 @@ public class Camera2VideoFragment extends Fragment
         mButtonVideo = (Button) view.findViewById(R.id.video);
         mButtonVideo.setOnClickListener(this);
         ButtonSetup.setup(view);
+        ((CameraActivity) getActivity()).sensorLogger.initializeSensors();
 
 //        view.findViewById(R.id.info).setOnClickListener(this);
     }
@@ -323,11 +324,11 @@ public class Camera2VideoFragment extends Fragment
                     if (mIsRecordingVideo) {
                         stopRecordingVideo();
                         ((CameraActivity) getActivity()).gpsLogger.unsubscribeToGPS();
-//                        ((CameraActivity) getActivity()).sensorHandler.startLogging();
+                        ((CameraActivity) getActivity()).sensorLogger.stopLogging();
                     } else {
                         startRecordingVideo();
                         ((CameraActivity)getActivity()).gpsLogger.subscribeToGPS();
-//                        ((CameraActivity) getActivity()).sensorHandler.stopLogging();
+                        ((CameraActivity) getActivity()).sensorLogger.startLogging();
                     }
                     break;
                 }

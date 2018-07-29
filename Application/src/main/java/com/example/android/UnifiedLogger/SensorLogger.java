@@ -15,7 +15,7 @@ import java.io.IOException;
  * Created by vinay on 7/25/18.
  */
 
-public class MySensorHandler implements SensorEventListener {
+public class SensorLogger implements SensorEventListener {
 
     Activity activity;
 
@@ -28,12 +28,11 @@ public class MySensorHandler implements SensorEventListener {
     boolean accelActive = false;
     boolean gyroActive = false;
 
-    public MySensorHandler(Activity activity) {
+    public SensorLogger(Activity activity) {
         this.activity = activity;
     }
 
     public void initializeSensors() {
-        this.activity = activity;
         sensorManager = (SensorManager) activity.getSystemService(Context.SENSOR_SERVICE);
         accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         gyroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);

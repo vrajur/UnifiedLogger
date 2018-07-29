@@ -18,12 +18,11 @@ package com.example.android.UnifiedLogger;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class CameraActivity extends Activity {
 
     GpsLogger gpsLogger;
-    MySensorHandler sensorHandler;
+    SensorLogger sensorLogger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +32,7 @@ public class CameraActivity extends Activity {
 //        TextView textView = this.findViewById(R.id.textView);
 //        textView.setText("Camera Activity Initialized");
         gpsLogger = new GpsLogger(CameraActivity.this);
-//        sensorHandler = new MySensorHandler(CameraActivity.this);
-//        sensorHandler.initializeSensors();
+        sensorLogger = new SensorLogger(CameraActivity.this);
 
         if (null == savedInstanceState) {
             getFragmentManager().beginTransaction()
