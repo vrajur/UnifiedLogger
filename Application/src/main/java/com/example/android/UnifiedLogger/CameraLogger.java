@@ -32,6 +32,7 @@ public class CameraLogger extends CameraCaptureSession.CaptureCallback {
         TextView textView = (TextView) activity.findViewById(R.id.textView);
 
         String logname = videoName.replaceFirst("^Video_", "CameraLog_");
+        logname = videoName.replaceFirst("^.mp4", ".txt");
         camlogWriter = new FileWriter(logname, activity);
         if (textView != null) {
             textView.append("\nCreated: " + camlogWriter.filename);
