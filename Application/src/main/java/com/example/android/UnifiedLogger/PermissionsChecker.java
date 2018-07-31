@@ -17,6 +17,8 @@ public class PermissionsChecker {
     public static final int REQUEST_EXTERNAL_STORAGE = 0;
     public static final int REQUEST_LOCATION = 1;
     public static final int REQUEST_CAMERA = 1;
+    public static final int REQUEST_NETWORK = 1;
+
 
     public static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -28,6 +30,10 @@ public class PermissionsChecker {
     };
     public static String[] PERMISSIONS_CAMERA = {
             Manifest.permission.CAMERA
+    };
+    public static String[] PERMISSIONS_NETWORK = {
+            Manifest.permission.ACCESS_NETWORK_STATE,
+            Manifest.permission.ACCESS_WIFI_STATE
     };
 
     // Check Storage Permissions:
@@ -51,6 +57,12 @@ public class PermissionsChecker {
         return (permissionCamera == PackageManager.PERMISSION_GRANTED);
     }
 
+    public static boolean checkNetworkPermissions(Activity activity) {
+        int permissionNetwork = ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_NETWORK_STATE);
+        int permissionWifi = ActivityCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_WIFI_STATE);
+        return (permissionNetwork == PackageManager.PERMISSION_GRANTED) && (permissionWifi == PackageManager.PERMISSION_GRANTED);
+    }
+
     // Request Storage Permissions:
     public static void requestStoragePermissions(Activity activity) {
         // We don't have permission so prompt the user
@@ -65,6 +77,11 @@ public class PermissionsChecker {
     // Request Camera Permissions:
     public static void requestCameraPermissions(Activity activity) {
         ActivityCompat.requestPermissions(activity, PERMISSIONS_CAMERA, REQUEST_CAMERA);
+    }
+
+    // Request Network Permissions:
+    public static void requestNetworkPermissions(Activity activity) {
+        ActivityCompat.requestPermissions(activity, PERMISSIONS_NETWORK, REQUEST_NETWORK);
     }
 
     //    @Override

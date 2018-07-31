@@ -26,7 +26,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
-import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
@@ -43,6 +42,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.app.ActivityCompat;
@@ -71,6 +71,8 @@ public class Camera2VideoFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
 
     private TextView textView;
+    public PhoneTriggers phoneTriggers;
+    public long mVideoStartTimeNanos;
 
     private static final int SENSOR_ORIENTATION_DEFAULT_DEGREES = 90;
     private static final int SENSOR_ORIENTATION_INVERSE_DEGREES = 270;
@@ -169,7 +171,7 @@ public class Camera2VideoFragment extends Fragment
     /**
      * Whether the app is recording video now
      */
-    private boolean mIsRecordingVideo;
+    public boolean mIsRecordingVideo;
 
     /**
      * An additional thread for running tasks that shouldn't block the UI.
@@ -221,7 +223,7 @@ public class Camera2VideoFragment extends Fragment
 
     };
     private Integer mSensorOrientation;
-    private String mNextVideoAbsolutePath;
+    public String mNextVideoAbsolutePath;
     private String mNextVideoName;
     private CaptureRequest.Builder mPreviewBuilder;
 
@@ -292,6 +294,8 @@ public class Camera2VideoFragment extends Fragment
         textView.setHeight(mTextureView.getHeight());
         mButtonVideo = (Button) view.findViewById(R.id.video);
         mButtonVideo.setOnClickListener(this);
+        phoneTriggers = new PhoneTriggers(this.getActivity());
+        mVideoStartTimeNanos = 0;
         ButtonSetup.setup(view);
         ((CameraActivity) getActivity()).sensorLogger.initializeSensors();
         if (textView != null) {
@@ -340,10 +344,19 @@ public class Camera2VideoFragment extends Fragment
                         activity.sensorLogger.stopLogging();
                         activity.camLogger.stopLogging();
                     } else {
-                        startRecordingVideo();
-                        activity.gpsLogger.subscribeToGPS();
-                        activity.sensorLogger.startLogging();
-                        activity.camLogger.startLogging(mNextVideoName);
+                        if (HelperFunctions.getAvailableSpace(HelperFunctions.Units.MB) > Settings.requiredFreeSpaceMB ) {
+                            startRecordingVideo();
+                            activity.gpsLogger.subscribeToGPS();
+                            activity.sensorLogger.startLogging();
+                            activity.camLogger.startLogging(mNextVideoName);
+                        } else {
+                            TextView textView = activity.findViewById(R.id.textView);
+                            if (textView != null) {
+                                textView.append(String.format(
+                                        "\nNot enough space on device!\n\tRequired: %3.3fMB\n\tAvailable: %3.3fMB",
+                                        Settings.requiredFreeSpaceMB, HelperFunctions.getAvailableSpace(HelperFunctions.Units.MB)));
+                            }
+                        }
                     }
                     break;
                 }
@@ -574,6 +587,7 @@ public class Camera2VideoFragment extends Fragment
         if (null == mCameraDevice) {
             return;
         }
+
         try {
             setUpCaptureRequestBuilder(mPreviewBuilder);
             HandlerThread thread = new HandlerThread("CameraPreview");
@@ -588,6 +602,22 @@ public class Camera2VideoFragment extends Fragment
         builder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
         builder.set(CaptureRequest.SENSOR_EXPOSURE_TIME, (long) 1);
     }
+
+//    @Override
+//    public void onNotEnoughSpaceLeft(double remainingMB) {
+//        // Check if enough space left:
+//        if (textView != null) {
+//            textView.append(String.format(
+//                    "\nEnding Recording - Not enough space left on device!\n\tRequired: %3.3fMB\n\tAvailable: %3.3fMB",
+//                    Settings.requiredFreeSpaceMB, remainingMB));
+//        }
+//        Log.d("CamLogger", String.format("Remaining Space: %3.2fMB", HelperFunctions.getAvailableSpace(HelperFunctions.Units.MB)));
+//
+//        // Stop logging:
+//        if (mIsRecordingVideo) {
+//            mButtonVideo.performClick();
+//        }
+//    }
 
     /**
      * Configures the necessary {@link android.graphics.Matrix} transformation to `mTextureView`.
@@ -701,6 +731,7 @@ public class Camera2VideoFragment extends Fragment
 
                             // Start recording
                             mMediaRecorder.start();
+                            mVideoStartTimeNanos = SystemClock.elapsedRealtimeNanos();
                         }
                     });
                     updatePreview();

@@ -17,7 +17,18 @@
 package com.example.android.UnifiedLogger;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Environment;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.WindowManager;
 
 public class CameraActivity extends Activity {
@@ -25,11 +36,13 @@ public class CameraActivity extends Activity {
     GpsLogger gpsLogger;
     SensorLogger sensorLogger;
     CameraLogger camLogger;
+    private BroadcastReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+
 
         // Disable Screen Timeout:
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -41,16 +54,44 @@ public class CameraActivity extends Activity {
 
         if (null == savedInstanceState) {
             getFragmentManager().beginTransaction()
-                    .replace(R.id.container, Camera2VideoFragment.newInstance())
+                    .replace(R.id.container, Camera2VideoFragment.newInstance(), "Camera2VideoFragment")
                     .commit();
         }
+
+        // Request Network Permissions:
+        if (!PermissionsChecker.checkNetworkPermissions(this)) {
+            PermissionsChecker.requestNetworkPermissions(this);
+        }
+        Log.d("MainActivity", "Active Network: " + HelperFunctions.getCurrentSsid(this.getApplicationContext()));
+
+        // Register broadcast receiver:
+        IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+
+        receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Log.d("MainActivity", "New Network Connection: " + HelperFunctions.getCurrentSsid(context));
+            }
+        };
+        registerReceiver(receiver, filter);
+        Log.d("MainActivity", "Registered Broadcast Listener");
     }
+
+
 
     @Override
     protected void onPause() {
-        super.onPause();
         gpsLogger.unsubscribeToGPS();
+        super.onPause();
     }
 
+    @Override
+    protected void onDestroy() {
+        if (receiver != null) {
+            unregisterReceiver(receiver);
+            receiver = null;
+        }
+        super.onDestroy();
+    }
 
 }

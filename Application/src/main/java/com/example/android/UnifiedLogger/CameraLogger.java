@@ -2,14 +2,15 @@ package com.example.android.UnifiedLogger;
 
 import android.app.Activity;
 import android.hardware.camera2.CameraCaptureSession;
-import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.CaptureResult;
 import android.hardware.camera2.TotalCaptureResult;
 import android.os.SystemClock;
+import android.support.v7.widget.ThemedSpinnerAdapter;
 import android.util.Log;
 import android.widget.TextView;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -24,7 +25,7 @@ public class CameraLogger extends CameraCaptureSession.CaptureCallback {
 
     public CameraLogger(Activity activity) {
         this.activity = activity;
-        camlogWriter = null;
+        this.camlogWriter = null;
     }
 
 
@@ -56,8 +57,32 @@ public class CameraLogger extends CameraCaptureSession.CaptureCallback {
 
     @Override
     public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request, TotalCaptureResult results) {
-        long timestamp = SystemClock.elapsedRealtimeNanos();
 
+
+        Camera2VideoFragment fragment = (Camera2VideoFragment) activity.getFragmentManager().findFragmentByTag("Camera2VideoFragment");
+        if (!fragment.mIsRecordingVideo) {
+            return;
+        }
+
+        // Stop recording if not enough space left on device
+        double remainingMB = HelperFunctions.getAvailableSpace(HelperFunctions.Units.MB);
+        Log.d("PhoneTrigger", String.format("Remaining Space: %3.2fMB", remainingMB));
+        if (fragment.mIsRecordingVideo && remainingMB < Settings.requiredFreeSpaceMB) {
+            fragment.phoneTriggers.onNotEnoughSpaceLeft(remainingMB);
+            return;
+        }
+
+        // Truncate File if past limits:
+        double elapsedTimeSeconds = HelperFunctions.getTimeSince(fragment.mVideoStartTimeNanos, HelperFunctions.Units.SECONDS);
+        double videoSizeMB = HelperFunctions.getVideoSize(new File(fragment.mNextVideoAbsolutePath), HelperFunctions.Units.MB);
+        Log.d(TAG, String.format("Elapsed Time: %3.2f seconds\tVideo Size: %3.2fMB", elapsedTimeSeconds, videoSizeMB));
+        if (elapsedTimeSeconds > Settings.maxVideoLengthSeconds || videoSizeMB > Settings.maxVideoSizeMB) {
+            fragment.phoneTriggers.onTruncateVideo(elapsedTimeSeconds, videoSizeMB);
+            return;
+        }
+
+        // Write Log Data to File:
+        long timestamp = SystemClock.elapsedRealtimeNanos();
         for (CaptureResult result: results.getPartialResults()) {
             try {
                 if (camlogWriter != null) {
@@ -69,20 +94,5 @@ public class CameraLogger extends CameraCaptureSession.CaptureCallback {
                 e.printStackTrace();
             }
         }
-
-
-
-//        Log.d(TAG, "Results:");
-//        for (CaptureResult result : results.getPartialResults()) {
-//            int i = result.getSequenceId();
-//            Log.d(TAG, "Result ["+i+"]: " + result.toString());
-//            Log.d(TAG, "Frame Number: " + result.getFrameNumber());
-//            Log.d(TAG, "Timestamp: " + result.get(CaptureResult.SENSOR_TIMESTAMP));
-//            Log.d(TAG, "System Time: " + timestamp);
-//            i += 1;
-//        }
-
     }
-
-
 }
